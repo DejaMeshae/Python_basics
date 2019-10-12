@@ -4,3 +4,8 @@
 name = "Deja"
 print(len(name))
 # len function will print out the length of the string wich is 4
+
+# Dotnotation methods
+# .title() capatizle the first letter
+sentence = "girl bye"
+print(sentence.title())

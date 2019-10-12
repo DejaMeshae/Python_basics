@@ -10,12 +10,10 @@ print(name[0:3])'''  # slice a string
 
 first = "deja"
 last = "ameringer"
-full_name = f"Welcome {first} {last}"  # the f means its a formatted string
-print(full_name)
-
-# dotnotation methods
-'''print(full.title())  # capatizle the first letter
-print(full.strip())  # to remove white space
+full_name = f"{first} {last}"
+# the f means its a formatted string
+# remember .title capalize the first letter
+print("Welcome " + full_name.title())
 
 x = input("x: ")
 y = int(x) + 1
