@@ -29,3 +29,15 @@ terry.swim_backwards()
 # We created a Trout object that uses the methods from the fish class even though we did not define the methods in this class
 # We only needed to pass the value of Terry to the first_name variable
 # Then run the code CTL + ALT + N
+
+
+class Clownfish(Fish):
+    def live_with_anemone(self):
+        print("The clownfish is co existing with sea anemone.")
+
+
+    # creating a method
+casey = Clownfish("Casey")
+print(casey.first_name + " " + casey.last_name)
+casey.swim()
+casey.live_with_anemone()
