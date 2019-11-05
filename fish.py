@@ -1,6 +1,6 @@
 class Fish:
 
-     # def is at the start of a method, it defines a method
+     # def is at the start of a method, it defines a method, I think __init__ means initilized
     def __init__(self, first_name, last_name="Fish",
                  skeleton="bone", eyelids=False):
         self.first_name = first_name
@@ -19,6 +19,7 @@ class Fish:
 class Trout(Fish):  # this is the child class, notice I pass in the parent class
     pass
 
+
     # the pass keyword defaults the parent methods meaning I dont have to declare it again
 terry = Trout("Terry")
 print(terry.first_name + " " + terry.last_name)
@@ -35,9 +36,24 @@ class Clownfish(Fish):
     def live_with_anemone(self):
         print("The clownfish is co existing with sea anemone.")
 
-
     # creating a method
 casey = Clownfish("Casey")
 print(casey.first_name + " " + casey.last_name)
 casey.swim()
 casey.live_with_anemone()
+# Notice live_with_anemone() only applies to the class as that method is only apart of this class
+# Also take note that live_with_anemone() won't with another class
+
+
+class Shark(Fish):
+    def __init__(self, first_name, last_name='Shark',
+                 skeleton='cartilage', eyelids=True):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.skeleton = skeleton
+        self.eyelids = eyelids
+
+    def swim_backwards(self):
+        print("The shark cannot swim backwards, but can sink backwards.")
+# In the Shark class we have over written the initialized parameters by changing the last_name and cartilage string and eyelids to equal true
+# Also overrode the swim_backwards method
