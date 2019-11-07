@@ -31,7 +31,7 @@ print(now.strftime("%b-%d-%Y %H:%M"))'''
 # Import is like importing an entire library like import
 '''import this 
 
-# Tuples are similar to lists but they are immutable - which means they cannot be changed after creation
+# Tuples are similar to lists but they are immutable - which means they cannot be changed after creation, think of it like a list that has more than 1 item in the list
 my_tuple = ("Deja", "Ameringer", 27, "Associate Engineer")
 print(my_tuple)
 
