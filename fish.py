@@ -26,7 +26,7 @@ class Fish:
 
 # the pass keyword defaults the parent methods meaning I dont have to declare it again
 # This is me passing in the name of the fish so everytime I call Terry it will inherite the Trout methods
-terry = Trout("Terry") 
+terry = Trout("Terry") #I believe this is how I set the "Self" so instead self.METHOD I call terry.METHOD
 
 print(terry.first_name + " " + terry.last_name)  
 print(terry.skeleton)
@@ -35,8 +35,8 @@ terry.swim()
 terry.swim_backwards()
 # We created a Trout object that uses the methods from the fish class even though we did not define the methods in this class
 # We only needed to pass the value of Terry to the first_name variable
-# Then run the code CTL + ALT + N'''
-# I commented out lines 27-38 because below I am using that same class to show how to use the super() function
+# Then run the code CTL + ALT + N to excute lines 22-38'''
+# I commented out lines 22-38 because below I am using that same class to show how to use the super() function
 
 
 # these lines of code below uses the super() function, we are calling a parent method into a child method to change it, we added freshwater but this also still included all of the other parent methods
@@ -56,10 +56,10 @@ print(terry.eyelids)  # lines 54 and 55 use parent __intit__() through super()
 
 print(terry.water)  # Use child __init__() override
 terry.swim()  # Use parent swim() method
-# then run code to excute lines 43-58
+# then run code to excute lines 43-58, notice it is able to make use of both the child-specific __init__() variable water while also being able to call the Fish parent __init__() variables of first_name, last_name, and eyelids.
 
 
-class Clownfish(Fish):
+'''class Clownfish(Fish):
     def live_with_anemone(self):
         print("The clownfish is co existing with sea anemone.")
 
@@ -70,10 +70,11 @@ print(casey.first_name + " " + casey.last_name)
 casey.swim()
 casey.live_with_anemone()
 # Notice live_with_anemone() only applies to the class as that method is only apart of this class
-# Also take note that live_with_anemone() won't with another class
+# Also take note that live_with_anemone() won't with another class'''
+# then run code to excute lines 62-74
 
 
-class Shark(Fish):
+'''class Shark(Fish):
     def __init__(self, first_name, last_name='Shark',
                  skeleton='cartilage', eyelids=True):
         self.first_name = first_name
@@ -93,4 +94,4 @@ sammy.swim()
 sammy.swim_backwards()
 print(sammy.eyelids)
 print(sammy.skeleton)
-# overrode the __init__() and swim_backwards() (lines 50-58) also inheriting the swim() method from the parent class
+# overrode the __init__() and swim_backwards() (lines 50-58) also inheriting the swim() method from the parent class'''
